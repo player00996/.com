@@ -30,6 +30,23 @@
         perspective: 1000px;
       }
       
+        .j {
+      position: absolute;
+      top: 30px;
+      font-size: 45px;
+      color: white;
+      z-index: 999;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
       .title {
         position: absolute;
         top: 30px;
@@ -1268,8 +1285,8 @@
   <body class="not-loaded">
     <h1 class="title">IT'S FOR YOU ❤️</h1>
     <button class="reloadBtn" onclick="bloomFlower()">CLICK</button><br>
-    <a href="turtle.py">
-    <button>click</button>
+    
+    <div class="j">Your Title Here</div>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
