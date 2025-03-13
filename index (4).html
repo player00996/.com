@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Fire Zone</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+}
+
+/* Logo Styling with 3D Effect */
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform: perspective(500px) rotateY(10deg) rotateX(10deg);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.logo:hover {
+    transform: perspective(500px) rotateY(-10deg) rotateX(-10deg) scale(1.1);
+    box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.5);
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Button Styling */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #ff4444;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 5px 15px rgba(255, 68, 68, 0.4);
+}
+
+.btn:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .btn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Free Fire Logo with 3D Effect -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Free_Fire_logo.png" alt="Free Fire Logo" class="logo" />
+        <h1>Welcome to Free Fire Zone</h1>
+        <div class="buttons">
+            <a href="https://ff.garena.com" target="_blank" class="btn">Official Site</a>
+            <a href="https://www.youtube.com/results?search_query=free+fire+tutorial" target="_blank" class="btn">Tutorials</a>
+            <a href="https://reward.ff.garena.com" target="_blank" class="btn">Claim Rewards</a>
+            <a href="https://play.google.com/store/apps/details?id=com.dts.freefireth" target="_blank" class="btn">Download Game</a>
+        </div>
+    </div>
+</body>
+</html>
