@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahasia untuk Yessica ❤️</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;font-size:16px;line-height:1.4}
+    body{height:100vh;background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 50%,#203a43 100%);overflow:hidden;display:flex;justify-content:center;align-items:center;color:#fff;position:relative}
+    .container{text-align:center;width:95%;max-width:380px;padding:20px;border-radius:20px;background:rgba(0,0,0,0.4);box-shadow:0 10px 30px rgba(0,0,0,0.5);animation:floatIn 1s ease-out;position:relative}
+    h1{font-size:1.8rem;margin:0 0 10px;letter-spacing:1px}
+    h2{font-size:1.3rem;margin:10px 0}
+    p{font-size:1rem;margin:8px 0;opacity:0.95}
+    button,input{padding:12px 20px;margin:8px;border:none;border-radius:25px;font-size:1rem;cursor:pointer;transition:all 0.2s ease}
+    button{background:linear-gradient(135deg,#ff4d6d,#ff758c);color:#fff;box-shadow:0 5px 15px rgba(255,77,109,0.4);min-width:100px}
+    button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,77,109,0.6)}
+    button:active{transform:translateY(0)}
+    input{text-align:center;background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);width:70%;max-width:220px}
+    input::placeholder{color:rgba(255,255,255,0.7)}
+    .no-btn{background:rgba(255,255,255,0.2)}
+    .screen{display:none}.active{display:block}
+    .tag{font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;color:#ffb8c3;margin-bottom:8px}
+    .footer-note{font-size:0.8rem;opacity:0.8;margin-top:10px}
+    #hint{position:absolute;top:10px;right:10px;background:#ff4d6d;color:#fff;padding:6px 10px;border-radius:12px;font-size:0.8rem;font-weight:bold;opacity:0;transition:opacity 0.3s;z-index:10}
+    .glow-orb{position:absolute;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#ff9a9e 0%,transparent 70%);filter:blur(2px);top:-40px;left:-40px;opacity:0.4;pointer-events:none}
+    .glow-orb.bottom{bottom:-40px;right:-40px;background:radial-gradient(circle,#a8e6cf 0%,transparent 70%)}
+    #type{min-height:60px;font-size:1rem}
+    .cursor{display:inline-block;width:8px;height:18px;background:#fff;margin-left:2px;animation:blink 1s infinite}
+    @keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+    @keyframes floatIn{from{opacity:0;transform:translateY(15px) scale(0.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    .heart{position:absolute;width:14px;height:14px;background:#ff4d6d;transform:rotate(45deg);animation:float 5s linear infinite;opacity:0.7}
+    .heart:before,.heart:after{content:'';position:absolute;width:14px;height:14px;background:#ff4d6d;border-radius:50%}
+    .heart:before{top:-7px;left:0}.heart:after{left:-7px;top:0}
+    @keyframes float{0%{transform:translateY(100vh) rotate(45deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-20px) rotate(45deg);opacity:0}}
+    .mini-btn{padding:10px 18px;font-size:0.9rem;margin:6px}
+    .extra-question{margin-top:20px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.2);opacity:0;transform:translateY(10px);transition:all 0.6s ease}
+    .extra-question.show{opacity:1;transform:translateY(0)}
+    .submit-msg{font-size:1.1rem;font-weight:bold;color:#ffd700;margin:15px 0;padding:15px;background:rgba(255,215,0,0.2);border-radius:20px;border:2px solid rgba(255,215,0,0.5);animation:fadeInBold 1s ease-out;display:none}
+    .submit-msg.show{display:block}
+    @keyframes fadeInBold{0%{opacity:0;transform:scale(0.9) translateY(10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
+    .zoho-form-container{display:none;max-width:100%;height:380px;overflow:hidden;border-radius:18px;margin:12px 0;background:rgba(255,255,255,0.05);box-shadow:0 8px 25px rgba(0,0,0,0.4)}
+    .zoho-form-container.active{display:block}
+    .zoho-form-container iframe{width:100%;height:100%;border:none;border-radius:18px}
+    .cut-btn{background:linear-gradient(135deg,#10b981,#34d399);margin-top:10px;font-weight:bold}
+    .final-msg{display:none;font-size:0.95rem;color:#a8e6cf;margin-top:15px;padding:12px;background:rgba(168,230,207,0.3);border-radius:18px;border-left:4px solid #a8e6cf;animation:fadeInFinal 1s ease-out}
+    .final-msg.show{display:block}
+    @keyframes fadeInFinal{0%{opacity:0;transform:translateX(-20px)}100%{opacity:1;transform:translateX(0)}}
+    .success-final{margin-top:18px;padding:20px;background:linear-gradient(135deg,#4ade80,#86efac);border-radius:22px;color:#0f172a;font-weight:600;display:none;animation:fadeInSuccess 0.8s ease-out;box-shadow:0 10px 30px rgba(74,222,128,0.4)}
+    @keyframes fadeInSuccess{0%{opacity:0;transform:translateY(15px) scale(0.95)}100%{opacity:1;transform:translateY(0) scale(1)}}
+    @media (max-width:480px){.container{padding:18px;max-width:95%}.zoho-form-container{height:340px}h1{font-size:1.6rem}input{width:85%}}
+  </style>
+</head>
+<body>
+<audio id="music" preload="auto" src="https://cdn.pixabay.com/audio/2022/10/30/audio_8c8a4b0b5a.mp3"></audio>
+<div class="glow-orb"></div><div class="glow-orb bottom"></div>
+
+<div class="container screen active" id="lock">
+  <div class="tag">Halaman rahasia</div>
+  <h1>🔒 Halaman Rahasia</h1>
+  <p>Halaman ini cuma untuk satu orang spesial...</p>
+  <p><b>Petunjuk:</b> Nama kamu ❤️</p>
+  <input type="password" id="code" placeholder="Masukkan kode">
+  <button onclick="unlock()">Buka 🌙</button>
+  <div id="hint">Coba: Yessica 💖</div>
+  <div class="footer-note">Pikir siapa yang bikin kamu senyum 😉</div>
+</div>
+
+<div class="container screen" id="s1">
+  <div class="tag">Untuk Yessica</div>
+  <h1>Hai Yessica ❤️</h1>
+  <p>Aku bikin ini khusus buat kamu</p>
+  <p>Baca pelan-pelan malam ini ✨</p>
+  <button onclick="next('s2')">Lanjut 🌙</button>
+</div>
+
+<div class="container screen" id="s2">
+  <div class="tag">Sedikit jujur</div>
+  <h1>Sedikit Kejujuran 🖤</h1>
+  <p>Notifikasi dari kamu bikin malamku hangat</p>
+  <p>Senyummu cahaya favoritku 🌌</p>
+  <button onclick="next('s3')">Lanjut 💫</button>
+</div>
+
+<div class="container screen" id="s3">
+  <div class="tag">Mode Minecraft</div>
+  <h1>🎮 Mode Minecraft</h1>
+  <p id="type"></p><span class="cursor" id="cursor"></span>
+  <br><button onclick="next('s4')">Lanjut ➡️</button>
+</div>
+
+<div class="container screen" id="s4">
+  <div class="tag">Pertanyaan penting</div>
+  <h1>Satu Pertanyaan 😳</h1>
+  <p>Maukah kamu main Minecraft bersamaku?</p>
+  <p>👤 <b>Aku ❤️ Yessica</b></p>
+  <button onclick="yesClick()">IYA 😍</button>
+  <button class="no-btn" onclick="moveNo(this)">TIDAK 🙈</button>
+</div>
+
+<div class="container screen" id="s5">
+  <div class="tag">Jawabanmu</div>
+  <h1>Aku Sudah Tahu 😍❤️</h1>
+  <p>Malam ini jadi indah banget</p>
+  <p>Terima kasih jadi bagian duniaku 🖤</p>
+  <h2>🌙 Selamanya Milikmu 🌙</h2>
+  <div class="footer-note">Nanti malam kita main Minecraft 🎮</div>
+
+  <div id="extraQuestion" class="extra-question">
+    <p>Boleh aku tahu lebih banyak tentang kamu? 😊</p>
+    <div id="yesNoButtons">
+      <button class="mini-btn" onclick="showSubmitMsg()">Iya</button>
+      <button class="mini-btn no-btn" onclick="moreNo()">Tidak</button>
+    </div>
+    
+    <div id="submitMsg" class="submit-msg">
+      <strong>Form diisi dulu, baru selesai!</strong><br>
+      <small>1 detik lagi form muncul</small>
+    </div>
+    
+    <div id="zohoFormContainer" class="zoho-form-container">
+      <iframe src="https://forms.zohopublic.in/ayushmahapatra20gm1/form/sectionA/formperma/r29TiwpoDMuzR1Hjy8eVrRhJWsiRG2a57-pgEedBjgs" scrolling="yes">Loading...</iframe>
+      <br>
+      <button class="cut-btn mini-btn" onclick="showSuccess()">✅ Form Selesai? Lanjut!</button>
+    </div>
+    
+    <div id="finalMsg" class="final-msg">
+      Cukup itu saja yang ingin kutanyakan. Website selesai di sini 🌙
+    </div>
+    
+    <p id="thanksMsg" style="margin-top:8px;font-size:0.9rem;display:none">Oke, terima kasih ya sudah sampai sini 🤍</p>
+    
+    <div id="successFinal" class="success-final">
+      🎉 Terima kasih Yessica! Form sudah terisi. Nanti malam kita main Minecraft 😊🎮
+    </div>
+  </div>
+</div>
+
+<script>
+const secret="yessica";
+const text="Yessica, aku ingin jelajahi Minecraft bersamamu. Rumah kecil, petualangan besar ❤️🎮";
+let i=0, startedTyping=false, wrongCodeCount=0;
+
+function typeText(){
+  if(i<text.length){
+    document.getElementById('type').textContent += text[i++];
+    setTimeout(typeText, 60);
+  }
+}
+
+function startTyping(){
+  if(!startedTyping){
+    startedTyping = true;
+    i = 0;
+    document.getElementById('type').textContent = "";
+    typeText();
+  }
+}
+
+function next(screenId){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(screenId).classList.add('active');
+  
+  if(screenId === 's3'){
+    setTimeout(startTyping, 500);
+  }
+  
+  if(screenId === 's5'){
+    setTimeout(()=>{document.getElementById('extraQuestion').classList.add('show');}, 1800);
+  }
+}
+
+function unlock(){
+  const val = document.getElementById('code').value.toLowerCase().trim();
+  if(val === secret){
+    document.getElementById('hint').style.opacity = 0;
+    next('s1');
+    const music = document.getElementById('music');
+    music.volume = 0.3;
+    music.play().catch(e=>console.log('Music play failed'));
+    wrongCodeCount = 0;
+  } else {
+    wrongCodeCount++;
+    alert('Kode salah 💔 Coba lagi');
+    if(wrongCodeCount >= 2){
+      document.getElementById('hint').style.opacity = 1;
+      setTimeout(()=>{document.getElementById('hint').style.opacity = 0;}, 1200);
+      wrongCodeCount = 0;
+    }
+  }
+}
+
+function yesClick(){ next('s5'); }
+
+function moveNo(btn){
+  btn.style.position = 'absolute';
+  btn.style.left = Math.random()*70 + '%';
+  btn.style.top = Math.random()*60 + '%';
+}
+
+function showSubmitMsg(){
+  document.getElementById('yesNoButtons').style.display = 'none';
+  document.getElementById('submitMsg').classList.add('show');
+  
+  setTimeout(()=>{
+    document.getElementById('zohoFormContainer').classList.add('active');
+    
+    setTimeout(()=>{
+      document.getElementById('finalMsg').classList.add('show');
+    }, 7500);
+  }, 1000);
+}
+
+function showSuccess(){
+  document.getElementById('zohoFormContainer').classList.remove('active');
+  document.getElementById('finalMsg').classList.remove('show');
+  setTimeout(()=>{
+    document.getElementById('successFinal').style.display = 'block';
+  }, 300);
+}
+
+function moreNo(){
+  document.getElementById('thanksMsg').style.display = 'block';
+  document.getElementById('yesNoButtons').style.display = 'none';
+}
+
+function createHeart(){
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.style.left = Math.random()*100 + 'vw';
+  heart.style.animationDuration = (4 + Math.random()*2) + 's';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(), 5200);
+}
+setInterval(createHeart, 500);
+</script>
+</body>
+</html>
